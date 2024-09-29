@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LearniFy</title>
+    <style>
+        body {
+            background-image: url('backimage.jpeg'); /* Make sure to have backimage.jpeg in your project folder */
+            background-color: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+            color: white; /* Sets text color to white */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .letter {
+            display: inline-block;
+            animation: fall 2s linear forwards;
+            animation-delay: calc(var(--delay) * 0.1s);
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title">
+        <span class="letter" style="--delay: 1">L</span>
+        <span class="letter" style="--delay: 2">E</span>
+        <span class="letter" style="--delay: 3">A</span>
+        <span class="letter" style="--delay: 4">R</span>
+        <span class="letter" style="--delay: 5">N</span>
+        <span class="letter" style="--delay: 6">I</span>
+        <span class="letter" style="--delay: 7">F</span>
+        <span class="letter" style="--delay: 8">Y</span>
+    </div>
+</div>
+
+<button onclick="redirectToNextPage()">Ready To Learn</button>
+
+<script>
+    function redirectToNextPage() {
+        window.location.href = "index2.html";
+    }
+</script>
+
+</body>
+</html>
